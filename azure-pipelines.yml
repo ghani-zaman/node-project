@@ -12,10 +12,10 @@ variables:
   azureSubscription: 'def40ebd-9b5e-4a95-80a3-8964245c9305'
 
   # Web app name
-  webAppName: 'devapp-service'
+  webAppName: 'prodnode-apps'
 
   # Environment name
-  environmentName: 'devapp-service'
+  environmentName: 'prodnode-apps'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
