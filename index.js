@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Staging');
+  res.send('Staging Environment');
 });
 
 app.get('/users', (req, res) => {
