@@ -17,9 +17,15 @@ app.listen(PORT, () => {
 });
 
 app.get('/stress-cpu', (req, res) => {
-  let x = 0;
-  for (let i = 0; i < 1e7; i++) {
-    x += Math.sqrt(i);
+  let startTime = Date.now();
+  let duration = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+  while (Date.now() - startTime < duration) {
+    let x = 0;
+    for (let i = 0; i < 1e7; i++) {
+      x += Math.sqrt(i); // CPU intensive task
+    }
   }
-  res.send('CPU stress triggered');
+
+  res.send('CPU stress test completed after 5 minutes');
 });
