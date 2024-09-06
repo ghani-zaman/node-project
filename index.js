@@ -15,3 +15,11 @@ app.get('/users', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+app.get('/stress-cpu', (req, res) => {
+  let x = 0;
+  for (let i = 0; i < 1e7; i++) {
+    x += Math.sqrt(i);
+  }
+  res.send('CPU stress triggered');
+});
